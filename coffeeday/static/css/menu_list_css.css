@@ -1,0 +1,39 @@
+/* menu_list.css */
+
+.menu-list-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-list-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #351010; /* Adjust color to match your theme */
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    margin: 10px 0;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #351010; /* Adjust color to match your theme */
+    background-color: #f4f4f4;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-list li a:hover {
+    background-color: #351010; /* Adjust color to match your theme */
+    color: #ffffff;
+}

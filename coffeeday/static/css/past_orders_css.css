@@ -1,0 +1,73 @@
+/* Container for centering content and adding padding */
+.container {
+    
+    
+
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #351010; /* Adjust color to match your theme */
+    text-align: center;
+}
+
+/* Table styling */
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-bottom: 5rem;
+    margin: 0 auto;
+}
+
+/* Table header styling */
+thead th {
+    background-color: #351010;
+    color: white;
+    font-weight: 400;
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Table cell styling */
+tbody td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Zebra striping for rows */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Highlight row on hover */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style for list inside table cells */
+td ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+td ul li {
+    margin: 0.5rem 0;
+}
+
+/* Styling for "No orders" message */
+.no-orders {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    padding: 2rem;
+}

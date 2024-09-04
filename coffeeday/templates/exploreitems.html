@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Menu List</h2>
+<ul>
+    {% for menu in menus %}
+        <li>{{ menu.name }}: 
+            {% comment %} <ul>
+                {% for item in menu.items.all %}
+                    <li>{{ item.name }}</li>
+                {% endfor %}
+            </ul> {% endcomment %}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

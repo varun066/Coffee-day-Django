@@ -1,0 +1,82 @@
+/* menu_detail.css */
+
+.menu-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu-detail-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #351010; /* Adjust color to match your theme */
+    text-align: center;
+}
+
+.menu-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.menu-items-table th,
+.menu-items-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-items-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.item-image {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    
+}
+
+.item-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #351010; /* Adjust color to match your theme */
+}
+
+.item-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+.item-price {
+    font-size: 1rem;
+    color: #008000; /* Green color to indicate price */
+    font-weight: bold;
+}
+
+.add-to-cart-button {
+    background-color: #351010;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #574141; /* Adjust color to match your theme */
+}
+
+.back-to-menu-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #351010; /* Adjust color to match your theme */
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.back-to-menu-link:hover {
+    text-decoration: underline;
+}

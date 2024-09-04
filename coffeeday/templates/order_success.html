@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="success-container">
+
+    <h2>Order Successful</h2>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <div class="animation-container">
+    <lottie-player src="https://lottie.host/4263c8f2-f194-476d-a422-437d3f240579/sIrc1iWW0g.json" background="##ffffff" speed="2" style="width: 150px; height: 150px" autoplay="1" mode="normal" ></lottie-player>
+    </div>
+    <p>Your order has been placed successfully!</p>
+    <a href="{% url 'menu_list' %}" class="btn">Back to Menu</a>
+</div>
+    {% endblock %}

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about_us_css.css' %}">
+
+
+
+{% block content %}
+<section class="about-us">
+    <div class="container">
+        <h1>About Us</h1>
+        
+        <div class="about-intro">
+            <img src="{% static 'images/coffee-shop.jpg' %}" alt="Our Coffee Shop" class="about-image">
+            <p>Welcome to <strong>Beans & Bliss</strong> - your go-to destination for premium coffee, delectable pastries, and delightful sandwiches. Located in the heart of the city, our coffee shop is more than just a place to grab a cup of coffee; it's a community space where friends meet, families bond, and every sip tells a story.</p>
+        </div>
+
+        <div class="our-story">
+            <h2>Our Story</h2>
+            <p>Beans & Bliss was founded with a simple mission: to bring people together over great coffee and delicious food. Our journey began in 2020, with a passion for artisanal coffee and a vision to create a cozy, welcoming space for all. From our humble beginnings to becoming a local favorite, we've stayed true to our values of quality, community, and sustainability.</p>
+        </div>
+
+        <div class="our-values">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Quality:</strong> We source the finest beans and ingredients to ensure every cup and bite is exceptional.</li>
+                <li><strong>Community:</strong> We believe in fostering connections and creating a space where everyone feels at home.</li>
+                <li><strong>Sustainability:</strong> We are committed to environmentally-friendly practices and supporting local suppliers.</li>
+            </ul>
+        </div>
+
+        <div class="meet-the-team">
+            <h2>Meet the Team</h2>
+            <div class="team-member">
+                {% comment %} <img src="{% static 'images/varun.jpg' %}" alt="Varun B P" class="team-image"> {% endcomment %}
+                <h3>Varun B P</h3>
+                <p>Founder & Coffee Enthusiast. With a deep passion for coffee culture and a commitment to quality, Varun ensures that every cup we serve is exceptional.</p>
+            </div>
+            <div class="team-member">
+                {% comment %} <img src="{% static 'images/suhas.jpg' %}" alt="Suhas M R" class="team-image"> {% endcomment %}
+                <h3>Suhas M R</h3>
+                <p>Founder & Roast Master. Suhas brings expertise in roasting and blending, creating unique flavors that define our coffee offerings.</p>
+            </div>
+            <div class="team-member">
+                {% comment %} <img src="{% static 'images/karthik.jpg' %}" alt="Karthik M B" class="team-image"> {% endcomment %}
+                <h3>Karthik M B</h3>
+                <p>Founder & Coffee Curator. Karthik’s meticulous selection of coffee beans ensures that we only use the finest quality in our blends.</p>
+            </div>
+            <div class="team-member">
+                {% comment %} <img src="{% static 'images/darshan.jpg' %}" alt="Darshan Arun Habib" class="team-image"> {% endcomment %}
+                <h3>Darshan Arun Habeb</h3>
+                <p>Founder & Beverage Specialist. Darshan combines his expertise in brewing and flavor profiling to craft the perfect coffee experience for our customers.</p>
+            </div>
+        </div>
+        
+
+        <div class="contact-us">
+            <h2>Contact Us</h2>
+            <p>We’d love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:info@beansandbliss.com">info@beansandbliss.com</a></li>
+                <li><strong>Phone:</strong> (+91) 1234567899 </li>
+                <li><strong>Address:</strong> #315 MCC B block, Davangere - 577 004 </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 BEANS & BLISS. All rights reserved.</p>
+  </footer>
+{% endblock %}

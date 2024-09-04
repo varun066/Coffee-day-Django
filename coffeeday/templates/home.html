@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+    <!-- Hero Section -->
+    <div class="hero" style="background-image: url('{% static 'images/background.jpg' %}');">
+        <div class="hero-text">
+            <h1>Hello! {{request.user.username}}</h1>
+            <h3>Welcome to</h3>
+            <h1>BEANS & BLISS</h1>
+            <p>Your favorite spot for coffee and blissful moments.</p>
+        </div>
+    </div>
+
+    <!-- Description -->
+    <div class="description">
+        <p>Discover the best coffee and snacks in town. Our selection of food items is curated to ensure you have the best experience every time.</p>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards">
+        <div class="card">
+            <img src= '{% static "images/coffee.jpg" %}' alt="Item 1">
+            <div class="card-desc">
+                <h3>Coffee</h3>
+                <p>Explore our selection of premium coffees from around the world.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src='{% static "images/patery.jpg" %}' alt="Item 2">
+            <div class="card-desc">
+                <h3>Sandwichs</h3>
+                <p>Indulge in our freshly baked breads and sandwichs made with love and care.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src='{% static "images/cake.jpg" %}' width=600px height= 500px alt="Item 3">
+            <div class="card-desc">
+                <h3>Pasteries</h3>
+                <p>Celebrate your special moments with our delectable pasteries.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <blockquote>
+                    "BEANS & BLISS is my go-to place for coffee and pastries. The atmosphere is cozy, and the staff are always friendly."
+                </blockquote>
+                <cite>- Vijay</cite>
+            </div>
+            <div class="testimonial">
+                <blockquote>
+                    "I love their attention to detail in every cup of coffee and every bite of pastry. Highly recommended!"
+                </blockquote>
+                <cite>- Lakshmi</cite>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 BEANS & BLISS. All rights reserved.</p>
+      </footer>
+
+
+
+
+{% endblock %}
+

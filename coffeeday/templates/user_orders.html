@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Orders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #351010;
+            padding: 1rem;
+            color: white;
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .navbar-nav li {
+            display: inline;
+        }
+        
+        .navbar-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .order {
+            background: #f4f4f4;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .order h3 {
+            margin: 0;
+            margin-bottom: 0.5rem;
+        }
+        .order ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .order li {
+            background: #fff;
+            margin: 0.2rem 0;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+        a.btn {
+            background-color: #351010;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        a.btn:hover {
+            background-color: #574141;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Admin Dashboard</div>
+        <ul class="navbar-nav">
+            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Orders for {{ user.username }}</h2>
+        <ul>
+            {% for order in past_orders %}
+            <li class="order">
+                <h3>Order {{ order.id }} - {{ order.created_at }}</h3>
+                <ul>
+                    {% for item in order.items.all %}
+                    <li>{{ item.quantity }} x {{ item.item.name }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'user_list' %}" class="btn">Back to User List</a>
+    </div>
+</body>
+</html>

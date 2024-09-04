@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ADD</button>
+</form>
+
+<h2>Existing Menus</h2>
+<ul>
+    {% for menu in menus %}
+        <li>{{ menu.name }}
+        <ul>
+            {% for item in menu.items.all %}
+                <li>{{ item.name }}</li>
+            {% endfor %}
+        </ul>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

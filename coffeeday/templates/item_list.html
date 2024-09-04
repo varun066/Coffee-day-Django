@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="menu-detail-container">
+    <h2>{{ menu.name }}</h2>
+    <table class="menu-items-table">
+        {% comment %} <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Add to Cart</th>
+            </tr>
+        </thead> {% endcomment %}
+        <tbody>
+            {% for item in menu.items.all %}
+                <tr>
+                    <td><img src="{{ item.image.url }}" alt="{{ item.name }}" class="item-image"></td>
+                    <td class="item-name">{{ item.name }}</td>
+                    <td class="item-description">{{ item.description }}</td>
+                    <td class="item-price">Rs. {{ item.price }}</td>
+                    <td>
+                        <form action="{% url 'add_to_cart' item.id %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="menu_id" value="{{ menu.id }}">
+                            <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                        </form>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5">No items in this menu.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'menu_list' %}" class="back-to-menu-link">Back to Menu List</a>
+</div>
+{% endblock %}

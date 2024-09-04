@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Item List</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/dashboard.css' %}"> {% endcomment %}
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #351010;
+        padding: 1rem;
+        color: white;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-nav {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .navbar-nav li {
+        display: inline;
+    }
+    
+    .navbar-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+    
+    .form-container h2 {
+        margin-bottom: 20px;
+    }
+    
+    .form-container .btn {
+        width: 100%;
+    }
+
+
+
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Admin Dashboard</div>
+        <ul class="navbar-nav">
+            
+            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            <li><a href="{% url 'logout_superuser' %}">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+    <h2>Answer Question</h2>
+    <p>{{ question.question }}</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>

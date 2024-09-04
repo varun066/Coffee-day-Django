@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+
+<div class="container">
+    <h2>Your Cart</h2>
+    <table class="cart-table">
+        {% comment %} <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead> {% endcomment %}
+        <tbody>
+            {% for item in cart_items %}
+            <tr>
+                <td>
+                    <img src="{{ item.item.image.url }}" alt="{{ item.item.name }}" class="item-image">
+                    {{ item.item.name }}
+                </td>
+                <td>
+                    <span class="quantity-controls">
+                        <a href="{% url 'decrease_quantity' item.id %}" class="btn">-</a>
+                        <span class="quantity">{{ item.quantity }}</span>
+                        <a href="{% url 'increase_quantity' item.id %}" class="btn">+</a>
+                    </span>
+                </td>
+                <td class="item-price">Rs. {{ item.item.price }}</td>
+                <td>
+                    <form action="{% url 'remove_from_cart' item.id %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn remove-btn">Remove</button>
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">Your cart is empty.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p class="total-price">Total Price: Rs. {{ total_price }}</p>
+    <a href="{% url 'menu_list' %}" class="btn">Continue ordering</a>
+    <a href="{% url 'confirm_the_order' %}" class="btn">Order Now</a>
+</div>
+{% endblock %}

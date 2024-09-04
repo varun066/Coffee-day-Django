@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #351010;
+    color: white;
+}
+
+table td {
+    color: #555;
+}
+
+.total-price  {
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 20px auto;
+}
+
+p {
+    margin: 10px 0;
+    color: #555;
+    text-align: center;
+}
+
+button, a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form button {
+    background-color: #28a745;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+form a {
+    background-color: #dc3545;
+}
+
+form a:hover {
+    background-color: #c82333;
+}

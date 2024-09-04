@@ -1,0 +1,148 @@
+/* cart.css */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #351010; /* Adjust color to match your theme */
+    text-align: center;
+}
+
+.cart-table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+/* .cart-table thead th {
+    background-color: #351010;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.cart-table tbody td {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+} */
+
+.cart-table th, .cart-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Column widths */
+.cart-table th:nth-child(1), .cart-table td:nth-child(1) {
+    width: 20%; /* Adjust this value as needed */
+}
+
+.cart-table th:nth-child(2), .cart-table td:nth-child(2) {
+    width: 15%; /* Adjust this value as needed */
+}
+
+.cart-table th:nth-child(3), .cart-table td:nth-child(3) {
+    width: 10%; /* Adjust this value as needed */
+}
+
+.cart-table th:nth-child(4), .cart-table td:nth-child(4) {
+    width: 15%; /* Adjust this value as needed */
+    
+}
+
+.item-image {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls .btn {
+    background-color: #351010;
+    color: white;
+    border: none;
+    padding: 3px 6px; /* Smaller padding for smaller buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 0.9rem; /* Smaller font size for smaller buttons */
+}
+
+.quantity-controls .btn:hover {
+    background-color: #574141; /* Adjust color to match your theme */
+}
+
+.quantity {
+    margin: 0 10px; /* Add space between buttons and quantity */
+    font-size: 1.2rem;
+}
+
+.item-price {
+    font-size: 1rem;
+    color: #008000; /* Green color to indicate price */
+    font-weight: bold;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    margin: 20px 0;
+    margin-right: 200px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #351010;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 5px 0;
+}
+
+.btn:hover {
+    background-color: #574141; /* Adjust color to match your theme */
+}
+
+.btn:focus,
+.btn:active {
+    outline: none;
+}
+
+.remove-btn {
+    background-color: #e74c3c; /* Red color for remove button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b; /* Darker red for hover effect */
+}

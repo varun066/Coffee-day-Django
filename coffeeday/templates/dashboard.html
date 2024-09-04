@@ -1,0 +1,120 @@
+<!-- dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/dashboard.css' %}"> {% endcomment %}
+    <style>
+        /* dashboard.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #351010;
+    padding: 1rem;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-nav li {
+    display: inline;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.card {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 20%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #351010;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #574141;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Admin Dashboard</div>
+        <ul class="navbar-nav">
+            
+            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            <li><a href="{% url 'logout_superuser' %}">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="card">
+            <h3>Items</h3>
+            <p>Total Items: {{ items_count }}</p>
+            <a href="{% url 'dashboard_item_list' %}" class="btn">Manage Items</a>
+        </div>
+        <div class="card">
+            <h3>Menus</h3>
+            <p>Total Menus: {{ menus_count }}</p>
+            <a href="{% url 'dashboard_menu_list' %}" class="btn">Manage Menus</a>
+        </div>
+        <div class="card">
+            <h3>Users</h3>
+            <p>Total Users: {{ users_count }}</p>
+            <a href="{% url 'user_list' %}" class="btn">Manage Users</a>
+        </div>
+        <div class="card">
+            <h3>Answer Quires</h3>
+            
+            <a href="{% url 'answer_questions' %}" class="btn">Manage Quries</a>
+        </div>
+    </div>
+</body>
+</html>

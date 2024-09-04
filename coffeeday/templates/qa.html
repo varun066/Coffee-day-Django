@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+    <h2>Questions & Answers</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question in questions %}
+            <tr>
+                <td>{{ question.question }}</td>
+                <td>{{ question.answer|default:"Unanswered" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="ask-question-btn-container">
+        <button class="ask-question-btn"><a href="{% url 'ask_question' %}">Ask Question</a></button>
+    </div>
+</div>
+{% endblock %}

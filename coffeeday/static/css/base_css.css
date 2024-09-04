@@ -1,0 +1,87 @@
+body, html {
+    
+
+    font-family: Arial, sans-serif;
+    
+}
+
+
+
+
+
+
+
+html::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Ensure items are spread out */
+
+    align-items:center; /* Center items vertically */
+
+    background-color: #351010;
+    padding: 0.9rem;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    display: inline;
+}
+
+
+
+.navbar li {
+    display: inline;
+    padding: 0rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+
+}
+
+.navbar a:hover {
+    color: #ffcc00; /* Change to desired hover color */
+}
+
+.ask-question-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ask-question-btn {
+    background-color: #007bff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.ask-question-btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ask-question-btn:hover {
+    background-color: #0056b3;
+}
+
+
